@@ -5,7 +5,7 @@ db= SQLAlchemy()
 def init_app(app):
 	db.app = app
 	db.init_app(app)
-	
+	db.create_all()
 class Book(db.Model):
 	__tablename__='book_details'
 	id=db.Column(db.Integer, primary_key=True)
@@ -27,4 +27,4 @@ class Book(db.Model):
 		'desciption':self.description,
 		}	 
 	
-	db.create_all()
+	
