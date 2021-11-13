@@ -27,3 +27,4 @@ class Book(db.Model):
 		'desciption':self.description,
 		}	 
 	
+	db.create_all()
